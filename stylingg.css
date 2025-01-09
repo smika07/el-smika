@@ -1,0 +1,1015 @@
+/* Reset margin dan padding untuk semua elemen */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Gaya untuk body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.forming {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.forming img {
+  z-index: -99;
+  position: absolute;
+}
+
+article h1,
+article p {
+  text-align: center;
+  color: #fff;
+}
+
+#google_translate_element {
+  height: 100%;
+  display: flex;
+}
+
+/* Gaya untuk navbar */
+.navbar {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 84px;
+  background-color: #3cb043; /* Warna latar belakang navbar */
+  padding: 14px 16px; /* Padding di dalam navbar */
+}
+
+.navbar h2 {
+  float: left;
+  font-size: 20px;
+  color: white; /* Warna teks tautan */
+  text-align: center;
+  padding: 14px 16px; /* Padding untuk tautan */
+  text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+/* Gaya untuk kontainer */
+.container {
+  position: relative;
+  max-width: 750px;
+  width: 100%;
+  background: #fff;
+  padding: 30px 50px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Gaya untuk flip card */
+.container .cover {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 50%;
+  z-index: 98;
+  transition: all 1s ease;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.container #flip:checked ~ .cover {
+  transform: rotateY(-180deg);
+}
+
+.container .cover .front,
+.container .cover .back {
+  position: absolute;
+  z-index: 99;
+  background-color: #3cb043;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.cover .back {
+  transform: rotateY(180deg);
+}
+
+.container .cover .text {
+  position: absolute;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .cover .text::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  background: #3cb043; /* Warna overlay */
+}
+
+.container .forms {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+
+.container .form-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-content .login-form,
+.form-content .signup-form {
+  width: calc(100% / 2 - 25px);
+  justify-content: space-around;
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+}
+
+.forms .form-content .title {
+  position: relative;
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+.forms .form-content .input-boxes {
+  margin-top: 10px;
+}
+
+.forms .form-content .input-box {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin: 4px 0;
+  position: relative;
+}
+.form-content .input-box input[type="radio"] {
+  width: 22px;
+  margin: 13px;
+}
+
+.form-content .input-box input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 0 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.form-content .input-box input:focus,
+.form-content .input-box input:valid {
+  border-color: #3cb043; /* Warna border saat fokus */
+}
+
+.form-content .input-box i {
+  position: absolute;
+  color: #3cb043; /* Warna ikon */
+  font-size: 17px;
+}
+
+.forms .form-content .button {
+  color: #fff;
+  margin-top: 30px;
+}
+
+.forms .form-content .button input {
+  color: #fff;
+  background: #3cb043; /* Warna tombol */
+  border-radius: 6px;
+  padding: 10px; /* Padding di dalam tombol */
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.sign-up-text label {
+  color: blue;
+}
+
+/*----------------header-----------*/
+.navbar a {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 13px;
+}
+
+.navbar .acount {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 13px;
+  font-size: 22px;
+}
+
+.nav-item {
+  height: 93px;
+  display: flex;
+  gap: 15px;
+  padding: 13px 20px;
+}
+.nav-item a button {
+  background-color: #7b827c;
+  color: #fff;
+  height: 35px;
+  width: 70px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.nav-item a button:hover {
+  background-color: #424543;
+  cursor: pointer;
+}
+/*----------------header-----------*/
+
+/*==============index=========*/
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.poster {
+  width: 25%;
+}
+
+.index {
+  width: 50%;
+  padding: 50px 20px;
+  color: #fff;
+  background: url(file/smika.jpg);
+  background-position: center;
+}
+
+.quotes {
+  width: 25%;
+  background-color: #adaead;
+  padding: 15px;
+  color: #000000;
+  font-size: 23px;
+  background: url(file/Imam-Syafii.jpg) no-repeat;
+  background-size: 400px;
+  background-position: bottom;
+}
+
+/*==============index=========*/
+/*===============chat==============*/
+.chatmenu {
+  display: flex;
+}
+.chatmenu .menu {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chatgrup {
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+  padding: 12px;
+}
+
+.chatgrup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.chatgrup input[type="text"],
+.chatgrup input[type="number"] {
+  width: calc(85% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 40px;
+}
+
+.chatgrup button[type="submit"] {
+  height: 40px;
+  background-color: #3cb043;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chatgrup button[type="submit"]:hover {
+  background-color: #2e8b34;
+}
+
+.chatbox {
+  border-bottom: 1px solid black;
+  color: #000000;
+  padding: 10px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.chatbox:hover {
+  background-color: #c6c6c6;
+}
+
+.chatbox p {
+  margin: 5px 0;
+}
+
+.chatbox a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 10px;
+  top: 10px;
+  text-decoration: none;
+  color: #0cae16;
+  font-weight: bold;
+}
+
+.main {
+  margin: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto;
+  height: 400px;
+  width: 100%;
+}
+
+.bublechat {
+  background-color: #e1ffc7;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.bublechat p {
+  margin: 5px 0;
+}
+
+.bublechat em {
+  font-size: 12px;
+  color: #888;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.bublechat p:first-child {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.no-message {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
+.no-group {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
+#pesan {
+  display: flex;
+  margin-top: 20px;
+}
+
+#pesan input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#pesan button[type="submit"] {
+  background-color: #3cb043;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#pesan button[type="submit"]:hover {
+  background-color: #2e8b34;
+}
+/*===============chat==============*/
+/*==============mapel==============*/
+.mapel_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.daftar-mapel {
+  list-style: none;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: calc(33.333% - 20px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.daftar-mapel:hover {
+  transform: scale(1.05);
+}
+.daftar-mapel a {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.daftar-mapel a:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.daftar-mapel #hapus {
+  background-color: #f44336; /* Warna merah untuk tombol hapus */
+}
+
+.daftar-mapel #hapus:hover {
+  background-color: #e53935; /* Warna merah lebih gelap saat hover */
+}
+
+.mapel {
+  border-bottom: 2px solid black;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.mapel h2 {
+  margin: 15px;
+  font-size: 24px;
+  color: #333;
+}
+
+.mapel a {
+  text-decoration: none;
+}
+
+.mapel button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.mapel button:hover {
+  background-color: #45a049;
+}
+
+.mapel form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mapel input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 300px;
+}
+
+.mapel input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.mapel input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/*==============mapel==============*/
+/*==============materi==============*/
+.materi_form {
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.materi_form form {
+  display: flex;
+  gap: 7px;
+}
+
+.materi_form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.materi_form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 40px;
+}
+
+.materi_form button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: fit-content;
+  height: 40px;
+}
+
+.materi_form button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.listmateri {
+  background-color: #dcdcdc;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid black;
+  font-weight: 600;
+}
+.listmateri:hover {
+  background-color: #797979;
+}
+.listmateri #list {
+  background: none;
+  color: #000000;
+  width: 100%;
+}
+/*==============materi==============*/
+/*==============isimateri==============*/
+.isi_materi {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.isi_materi .main {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.isi_materi h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.isi_materi h3 {
+  font-size: 20px;
+  color: #4caf50;
+  margin: 15px 0 5px 0;
+}
+
+.isi_materi p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.isi_materi ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.isi_materi ul li {
+  margin-bottom: 10px;
+}
+
+.file {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  bottom: 10px;
+  height: 70px;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(0, 157, 255);
+}
+/*==============isimateri==============*/
+/*==============soal==============*/
+.soal {
+  padding: 20px;
+}
+
+.soal .main {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.soal .main form {
+  display: flex;
+  flex-direction: column;
+}
+
+.soal .main div {
+  margin-bottom: 20px;
+}
+
+.soal .main p {
+  font-size: 16px;
+  color: #333;
+}
+
+.soal .main input[type="radio"] {
+  margin-right: 10px;
+}
+
+.soal .main input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.soal .main input[type="submit"]:hover {
+  background-color: #45a049;
+}
+/*==============soal==============*/
+/*==============absen==============*/
+.absen {
+  padding: 20px;
+}
+
+.absen .menu {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.absen h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.absen table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.absen th,
+.absen td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+.absen th {
+  background-color: #4caf50;
+  color: white;
+}
+
+.absen tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.absen tr:hover {
+  background-color: #e0e0e0;
+}
+
+.absen button {
+  background-color: #2cb3c5;
+  color: white;
+  border: none;
+  position: fixed;
+  bottom: 20px;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.absen button:hover {
+  background-color: #3795a8;
+}
+/*==============absen==============*/
+/*==============isimapel==============*/
+.tambah_materi {
+  padding: 20px;
+}
+
+.tambah_materi .main {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.tambah_materi .news {
+  margin-bottom: 20px;
+}
+
+.tambah_materi h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.tambah_materi .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tambah_materi label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.tambah_materi input[type="text"],
+.tambah_materi textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.tambah_materi textarea {
+  resize: vertical; /* Memungkinkan pengguna untuk mengubah ukuran textarea secara vertikal */
+  min-height: 100px; /* Tinggi minimum untuk textarea */
+}
+
+.tambah_materi input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tambah_materi input[type="submit"]:hover {
+  background-color: #45a049;
+}
+/*==============isimapel==============*/
+/*==============inputsoal==============*/
+.inputsoal {
+  display: flex; /* Menggunakan flexbox untuk tata letak */
+  padding: 20px;
+}
+
+.inputsoal .soalform {
+  width: 30%; /* Lebar form soal */
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-right: 20px; /* Jarak antara form dan daftar soal */
+}
+
+.inputsoal .soal {
+  flex: 1; /* Mengambil sisa ruang yang tersedia */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.inputsoal h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.inputsoal label {
+  font-weight: bold;
+  color: #555;
+  font-size: 30px;
+}
+
+.inputsoal textarea,
+.inputsoal input[type="text"],
+.inputsoal input[type="number"] {
+  width: 100%; /* Lebar penuh untuk input */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.inputsoal input[type="radio"] {
+  height: 30px;
+  width: 30px;
+}
+
+.inputsoal table {
+  width: 100%; /* Lebar penuh untuk tabel */
+  margin-bottom: 15px;
+}
+
+.inputsoal table th,
+.inputsoal table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.inputsoal button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.inputsoal button:hover {
+  background-color: #45a049;
+}
+
+.inputsoal .soal h3 {
+  margin-top: 0;
+}
+
+.inputsoal #hapus {
+  display: inline-block;
+  background-color: #de0a0a;
+  color: white;
+  text-align: center;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+}
+/*==============inputsoal==============*/
+.tambahanmateri {
+    padding: 20px;
+}
+
+.tambahanmateri .main {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.tambahanmateri h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.tambahanmateri label {
+    font-weight: bold;
+    color: #555;
+}
+
+.tambahanmateri input[type="text"],
+.tambahanmateri textarea,
+.tambahanmateri input[type="file"] {
+    width: 100%; /* Lebar penuh untuk input */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.tambahanmateri textarea {
+    resize: vertical; /* Memungkinkan pengguna untuk mengubah ukuran textarea secara vertikal */
+    min-height: 100px; /* Tinggi minimum untuk textarea */
+}
+
+.tambahanmateri button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tambahanmateri button:hover {
+    background-color: #45a049;
+}
+
+.nilai {
+  display: flex;
+}
+
+.nilai .menu {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.nilai .menu_box {
+  margin-bottom: 20px;
+}
+
+.nilai .menu_item {
+  margin: 10px 0;
+}
+
+.nilai .menu_item a {
+  text-decoration: none;
+  color: #333;
+}
+
+.nilai .menu_item a:hover {
+  color: #007BFF;
+}
+
+.nilai .main {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.nilai table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nilai th {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+}
+
+.nilai td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.nilai p {
+  color: #ff0000;
+}
